@@ -1,0 +1,608 @@
+/*======================== Google Font ===================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/*======================== BASE ===================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+/*======================== HEADER ===================*/
+
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(../Imgs/bannar.JPG);
+  background-position: center;
+  background-size: cover;
+}
+.nav {
+  padding: 2% 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  width: 2.5rem;
+}
+.logo-text {
+  color: #fff;
+  font-size: 14px;
+  margin-left: 0.5rem;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+.nav-links ul li a::after,
+.active::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: rgb(187, 27, 27);
+  margin: auto;
+  display: block;
+  transition: 0.2s;
+}
+
+.nav-links ul li a:hover::after,
+.nav-links ul li a.active::after {
+  width: 100%;
+}
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 3rem;
+}
+.text-box h3 {
+  font-size: 14px;
+  font-weight: 300;
+  padding: 10px 0 40px;
+  line-height: 1.5rem;
+}
+.nav-btn {
+  width: 11rem;
+  height: 2.6rem;
+  background: 0;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.nav-btn:hover {
+  background-color: rgb(187, 27, 27);
+  border: 1px solid rgb(187, 27, 27);
+}
+nav .uil {
+  display: none;
+}
+
+/*========= HEADER Responsive =========*/
+
+@media (max-width: 768px) {
+  .logo-img {
+    width: 2rem;
+  }
+  .logo-text {
+    font-size: 12px;
+  }
+  nav .uil {
+    display: block;
+    margin: 10px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  nav .uil-times {
+    width: 1rem;
+  }
+  .nav-links {
+    position: fixed;
+    right: -15rem;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: rgb(187, 27, 27);
+    text-align: left;
+    z-index: 2;
+    flex-direction: column;
+    transition: 0.3s;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .text-box h1 {
+    font-size: 1.5rem;
+  }
+  .text-box p {
+    font-size: 10px;
+  }
+  .nav-btn {
+    width: 7.2rem;
+    height: 2rem;
+    font-size: 10px;
+  }
+  .nav-links.showNav {
+    right: 0;
+  }
+}
+
+/*======================== Course ===================*/
+
+.course,
+.campus,
+.facilities,
+.testmonials,
+.about-us,
+.blog {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 6rem;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  padding-top: 10px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+.course-col {
+  flex-basis: 31%;
+  margin-left: 0.5rem;
+  background: #fff3f3;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  padding: 20px 12px;
+  transition: 0.5s;
+}
+h3 {
+  text-align: center;
+  margin: 10px 0;
+}
+.course-col:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hr {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(209, 209, 209);
+  margin-top: 5%;
+}
+
+/*========== Course Responsive ==========*/
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
+
+/*========================== Campus ========================*/
+
+.campus-col {
+  margin-bottom: 5%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  flex-basis: 31%;
+}
+
+.campus-col img {
+  width: 100%;
+  display: block;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+.campus-col img:hover + .layer {
+  background: rgb(243, 46, 46, 0.8);
+  height: 100%;
+}
+.layer:hover {
+  background: rgb(243, 46, 46, 0.8);
+  height: 100%;
+}
+.layer p {
+  width: 100%;
+  font-weight: 500;
+  font-size: 26px;
+  position: absolute;
+  bottom: 50%;
+  color: #fff;
+}
+
+/*========== Course Responsive ==========*/
+
+@media (max-width: 365px) {
+  .layer p {
+    font-size: 16px;
+  }
+}
+
+/*========================== Facilities ========================*/
+
+.facilities-col {
+  flex-basis: 31%;
+}
+.facilities-col img {
+  width: 100%;
+  min-height: 18rem;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.facilities-col h3 {
+  font-size: 16px;
+}
+.facilities-col p {
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+  margin: -0.6rem 0 10%;
+}
+
+/*========================== Testmonial ========================*/
+
+.testmonials-col {
+  background: #fff3f3;
+  text-align: left;
+  display: flex;
+  padding: 25px;
+  flex-basis: 41%;
+  margin-bottom: 5%;
+}
+.testmonials-col img {
+  height: 45px;
+  border-radius: 50%;
+  margin: 0 10px 0 5px;
+}
+.testmonials-col h3 {
+  text-align: left;
+  margin-top: 10px;
+}
+.testmonials-col i {
+  color: gold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*========================== Enroll ========================*/
+
+.enroll {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../Imgs/banner2.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 100px 0;
+  border-radius: 10px;
+}
+.enroll h1 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 3rem;
+}
+.enroll button {
+  width: 9rem;
+}
+
+/*========== Enroll Responsive ==========*/
+
+@media (max-width: 780px) {
+  .enroll h1 {
+    font-size: 22px;
+  }
+}
+
+/*======================== Footer ===================*/
+.footer {
+  text-align: center;
+  margin: 2rem;
+}
+.footer p {
+  font-weight: 400;
+}
+.footer-icons {
+  font-size: 20px;
+  color: rgb(201, 20, 171);
+  margin: 0.8rem 0;
+}
+.footer-icons .uil {
+  cursor: pointer;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+.footer-icons .uil:hover {
+  color: rgb(82, 12, 70);
+}
+.copyright {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: rgb(116, 116, 116);
+}
+
+/*--------------------------------- About Us Page -----------------------------------*/
+
+.about-header {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(../Imgs/background.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+.about-header h1 {
+  margin-top: 5rem;
+}
+
+/*========================== About US ========================*/
+.about-us {
+  margin-bottom: 10%;
+}
+.about-us-col {
+  text-align: left;
+  padding: 30px 2px;
+  flex-basis: 50%;
+}
+.about-us-col p {
+  margin-top: 1rem;
+  line-height: 1.8rem;
+}
+.about-us img {
+  width: 100%;
+}
+.about-btn {
+  border: 1px solid rgb(187, 27, 27);
+  color: rgb(187, 27, 27);
+  margin-top: 5%;
+  font-weight: 500;
+}
+.about-btn:hover {
+  color: #fff;
+}
+
+/*--------------------------------- BLOG Page -----------------------------------*/
+
+.blog-col1 {
+  flex-basis: 60%;
+}
+.blog-col1 img {
+  width: 100%;
+}
+.blog-col1 h2 {
+  text-align: left;
+  padding: 1.5rem 0;
+}
+.blog-col1 p {
+  text-align: left;
+  line-height: 1.7rem;
+}
+.comment-box {
+  margin-top: 5%;
+  padding: 1rem 1.3rem 1rem 1rem;
+  text-align: left;
+  border: 2px solid rgb(226, 224, 224);
+}
+.comment-box input {
+  height: 2.2rem;
+}
+.comment-box input,
+.comment-box textarea {
+  width: 100%;
+  margin-top: 1rem;
+  background: rgb(226, 224, 224);
+  border: 1px solid rgb(226, 224, 224);
+  padding: 0.3rem;
+}
+.comment-box input:focus,
+.comment-box textarea:focus {
+  outline: none;
+  border: 1px solid rgb(189, 189, 189);
+}
+
+.blog-col2 {
+  flex-basis: 35%;
+}
+table {
+  width: 100%;
+  text-align: left;
+}
+.blog-col2 h3 {
+  padding: 0.8rem 0rem;
+  background-color: rgb(209, 33, 33);
+  color: #fff;
+  width: 90%;
+}
+.blog-col2 td {
+  padding: 0.7rem 0rem 0.7rem 0.5rem;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/*========== Contact Responsive ==========*/
+
+@media (max-width: 780px) {
+  .blog-col1 h2 {
+    font-size: 20px;
+  }
+  .blog-col2 h3 {
+    padding: 0.5rem 0rem 0.5rem 0.2rem;
+    font-size: 16px;
+    margin-top: 10%;
+  }
+  .blog-col2 td {
+    font-size: 13.5px;
+  }
+}
+
+/*********************** loading ***********************/
+
+.loading {
+  position: fixed;
+  z-index: 102;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading.hidden {
+  animation: fadeOut 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loding_c {
+  border: 20px;
+  border-color: aqua;
+  border: 15px double darkcyan;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: loading-circle 1.5s;
+}
+
+@keyframes loading-circle {
+  25% {
+    width: 50px;
+    height: 50px;
+  }
+  50% {
+    width: 100px;
+    height: 100px;
+  }
+  75% {
+    width: 50px;
+    height: 50px;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/*========================== Testmonial ========================*/
+.contact {
+  padding: 2% 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.contact-info i {
+  color: tomato;
+}
+.contact-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+  font-weight: 500;
+}
+.contact-info p {
+  margin: 0;
+  padding: 0;
+}
+.contact-box {
+  text-align: left;
+}
+.contact-box input {
+  height: 2.2rem;
+}
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid rgb(226, 224, 224);
+  padding: 0.3rem;
+}
+.contact-box input:focus,
+.contact-box textarea:focus {
+  outline: none;
+  border: 1px solid rgb(189, 189, 189);
+}
+@media (max-width: 768px) {
+  .contact {
+    padding-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
